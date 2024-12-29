@@ -239,6 +239,17 @@ a {
     .no-print {
         display: none;
     }
+
+    /* Reduce spacing between h2 and content in right column */
+    #mainRight h2 {
+        padding-bottom: 0.5em;  /* Reduce from 1em to 0.5em */
+        margin-bottom: 0.2em;   /* Tighter margin */
+    }
+
+    /* Ensure proper spacing between sections */
+    #mainRight section {
+        margin-bottom: 2em;     /* Slightly reduced section spacing */
+    }
 }
 
 /* Add CSS classes for language bars */
