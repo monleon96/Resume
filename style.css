@@ -72,8 +72,7 @@ section {
 }
 
 /* Add this new CSS to align first sections */
-#mainLeft section:first-of-type,
-#mainRight section:first-of-type {
+#mainLeft section:first-of-type {
     margin-top: 1em;  /* Adjust this value as needed to match your desired spacing */
 }
 
@@ -182,7 +181,6 @@ a {
 }
 
 /* Print-Specific Styles */
-/* Print-Specific Styles */
 @media print {
     body {
         background-color: #fafafa; /* Retain original background color */
@@ -214,6 +212,18 @@ a {
         print-color-adjust: exact;
     }
 
+    /* Force About Me and Work Experience to stay together on the first page */
+    #mainRight section:nth-of-type(1), /* About Me */
+    #mainRight section:nth-of-type(2)  /* Work Experience */ {
+        page-break-inside: avoid;
+    }
+
+    /* Start Language section on a new page */
+    #mainLeft section:nth-of-type(4), /* Languages */
+    #mainLeft section:nth-of-type(5)  /* Publications */ {
+        page-break-before: always;
+    }
+
     /* Uniform Link Colors in Print */
     a.publication-link{
         color: #2c3e50 !important; /* Ensure color is consistent in print */
@@ -240,12 +250,15 @@ a {
     margin-top: 0.5em;
     margin-bottom: 1em;
     position: relative;
+    display: block; /* Ensure the bar is displayed as a block element */
 }
 .language-fill {
     background-color: #285f96;
     border-radius: 5px;
-    height: 8px;
-    width: 0;
+    height: 100%; 
+    position: absolute; /* Position inside the parent bar */
+    left: 0;
+    top: 0;
 }
 
 /* Education section styling */
