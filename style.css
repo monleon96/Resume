@@ -123,7 +123,7 @@ ul li {
 }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+@media screen and (max-width: 768px) {
     main {
         grid-template-columns: 1fr;
     }
@@ -133,55 +133,31 @@ ul li {
     }
 }
 
-/* Print Styles */
+/* Print-Specific Styles */
 @media print {
     body {
-        background-color: white;
-        margin: 0;
-        padding: 0.5cm;
-        font-size: 11pt;
+        background-color: #ffffff; /* Optional: Change background to white for print */
+        color: #000000; /* Optional: Ensure text is black for better print readability */
     }
 
     main {
-        display: grid;
-        grid-template-columns: 35% 65% !important; /* Force two-column layout */
-        margin: 0;
-        box-shadow: none;
-        background-color: white;
+        grid-template-columns: 35% 65% !important; /* Maintain two columns */
+        box-shadow: none; /* Remove shadows for print */
+        border-radius: 0; /* Remove border radius for print */
     }
 
     #mainLeft {
-        border-right: 1px solid #e0e0e0;
-        background-color: white;
-        padding: 0 1em;
+        border-right: 1px solid #e0e0e0 !important; /* Keep the right border */
+        border-bottom: none !important; /* Remove bottom border */
+        background-color: #ffffff; /* Optional: Change background to white for print */
     }
 
     header {
-        background-color: white;
-        color: #2c3e50;
-        padding: 0;
-        margin: 0 0 1em 0;
+        border-radius: 0; /* Remove rounded corners */
     }
 
-    h1 {
-        color: #2c3e50;
-    }
-
-    h1 strong {
-        color: #2c3e50;
-    }
-
-    a {
-        text-decoration: none;
-    }
-
-    /* Hide links URL printing by default */
-    a[href]:after {
-        content: none !important;
-    }
-
-    /* Ensure page breaks don't occur in the middle of sections */
-    section {
-        page-break-inside: avoid;
+    /* Optional: Hide elements that are unnecessary for print */
+    .no-print {
+        display: none;
     }
 }
