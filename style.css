@@ -34,6 +34,9 @@ h3 {
     color: #2c3e50; /* Navy color for section titles */
 }
 
+.work-entry h3 {
+    font-size: 1.2em; 
+}
 
 main { 
     display: grid;
@@ -127,5 +130,58 @@ ul li {
     #mainLeft {
         border-right: none;
         border-bottom: 1px solid #e0e0e0;
+    }
+}
+
+/* Print Styles */
+@media print {
+    body {
+        background-color: white;
+        margin: 0;
+        padding: 0.5cm;
+        font-size: 11pt;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 35% 65% !important; /* Force two-column layout */
+        margin: 0;
+        box-shadow: none;
+        background-color: white;
+    }
+
+    #mainLeft {
+        border-right: 1px solid #e0e0e0;
+        background-color: white;
+        padding: 0 1em;
+    }
+
+    header {
+        background-color: white;
+        color: #2c3e50;
+        padding: 0;
+        margin: 0 0 1em 0;
+    }
+
+    h1 {
+        color: #2c3e50;
+    }
+
+    h1 strong {
+        color: #2c3e50;
+    }
+
+    a {
+        text-decoration: none;
+    }
+
+    /* Hide links URL printing by default */
+    a[href]:after {
+        content: none !important;
+    }
+
+    /* Ensure page breaks don't occur in the middle of sections */
+    section {
+        page-break-inside: avoid;
     }
 }
