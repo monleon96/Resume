@@ -23,11 +23,15 @@ h1 strong {
     color: #ffffff;
 }
 
+/* Consistent h2 Styling */
 h2 {
     font-size: 1.5em;
     padding-bottom: 1em;
     color: #2c3e50; /* Navy color for subheadings */
+    margin-top: 0; /* Reset top margin */
+    margin-bottom: 0.5em; /* Consistent bottom margin */
 }
+
 
 h3 {
     font-size: 1em;
@@ -67,6 +71,17 @@ section {
     margin: auto 1em 3em 2em;
 }
 
+/* Add this new CSS to align first sections */
+#mainLeft section:first-of-type,
+#mainRight section:first-of-type {
+    margin-top: 1em;  /* Adjust this value as needed to match your desired spacing */
+}
+
+/* Add this new CSS to style the About Me section specifically */
+#mainRight section:first-of-type {
+    margin-top: 2em;  /* Increase this value if you want more space */
+}
+
 #mainLeft {
     border-right: 1px solid #e0e0e0; /* Light gray border */
     background-color: #f0f4f8; /* Soft blue background for the left sidebar */
@@ -81,6 +96,14 @@ a.publication-link {
     font-weight: bold;
 }
 a.publication-link:hover {
+    text-decoration: underline;
+}
+
+a.contact-link {
+    color: #3366CC;
+    text-decoration: none;
+}
+a.contact-link:hover {
     text-decoration: underline;
 }
 
@@ -159,9 +182,10 @@ a {
 }
 
 /* Print-Specific Styles */
+/* Print-Specific Styles */
 @media print {
     body {
-        /* background-color: #ffffff; */ /* Removed to retain original background */
+        background-color: #fafafa; /* Retain original background color */
         color: #000000; /* Ensure text is black for better print readability */
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
@@ -176,25 +200,29 @@ a {
     }
 
     #mainLeft {
-        /* background-color: #f0f4f8; */ /* Retain original background */
-        border-right: 1px solid #e0e0e0 !important; /* Keep the right border */
-        border-bottom: none !important; /* Remove bottom border */
-        /* background-color: #ffffff; */ /* Removed to retain original background */
+        border-right: 1px solid #e0e0e0; /* Light gray border */
+        background-color: #f0f4f8; /* Soft blue background for the left sidebar */
+        padding: 1em;
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
 
     header {
-        /* background-color: #2c3e50; */ /* Retain original background */
+        background-color: #2c3e50 !important; /* Retain original background */
         border-radius: 0; /* Remove rounded corners */
         -webkit-print-color-adjust: exact;
         print-color-adjust: exact;
     }
 
-    /* Ensure all elements retain their colors */
-    body, main, #mainLeft, header, section, h1, h2, h3, p, ul, li, a {
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
+    /* Uniform Link Colors in Print */
+    a.publication-link{
+        color: #2c3e50 !important; /* Ensure color is consistent in print */
+        text-decoration: none;
+    }
+
+    a.contact-link {
+        color: #3366CC !important; /* Ensure color is consistent in print */
+        text-decoration: none;
     }
 
     /* Optional: Hide elements that are unnecessary for print */
