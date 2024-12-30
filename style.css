@@ -10,12 +10,18 @@ body {
 }
 
 h1 {
-    font-size: 2.5em;
-    letter-spacing: .2em;
-    padding-top: 1em;
-    padding-bottom: 1em;
+    font-size: 2.8em;
+    letter-spacing: .3em;
+    padding-top: 0.5em;
+    padding-bottom: 0.7em;
     color: #ffffff; /* Navy color for main headings */
     line-height: 1.3;
+}
+
+h1 br {
+    margin-bottom: 0.5em; 
+    display: block;       
+    content: "";          
 }
 
 h1 strong {
