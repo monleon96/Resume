@@ -313,9 +313,16 @@ a {
         margin-top: 1.5em;
     }
 
-    /* Add margin before Publications section in right column */
+    /* Add padding before Publications section in right column */
+    .publications-section {
+        padding-top: 1.5em; /* Add top padding to ensure space */
+        /* Optionally prevent margin collapse */
+        overflow: hidden;
+    }
+
+    /* If needed, adjust the h2 margin as well */
     .publications-section h2 {  /* Publications section */
-        padding-top: 1.5em;
+        margin-top: 0; /* Reset to avoid conflict with padding */
     }
 }
 
