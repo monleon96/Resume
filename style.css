@@ -238,6 +238,16 @@ ul li {
     margin-bottom: 1em;  /* Increase space before bullet points */
 }
 
+.institution-name,
+.institution-date {
+    color: #666;
+}
+
+.institution-date {
+    min-width: 140px;
+    text-align: right;
+}
+
 .work-entry ul {
     margin-bottom: 2em;  /* Add more space after each list */
 }
