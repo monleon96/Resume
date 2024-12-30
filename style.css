@@ -72,11 +72,11 @@ section {
 }
 
 .contact-section {
-    margin-top: 1em;  /* Adjust this value as needed to match your desired spacing */
+    margin-top: 0.5em;  /* Adjust this value as needed to match your desired spacing */
 }
 
 .about-section {
-    margin-top: 2em;  /* Increase this value if you want more space */
+    margin-top: 1.5em;  /* Increase this value if you want more space */
 }
 
 #mainLeft {
@@ -306,23 +306,17 @@ a {
         grid-template-columns: 35% 65% !important; /* Maintain two columns */
         box-shadow: none; /* Remove shadows for print */
         border-radius: 0; /* Remove border radius for print */
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
     }
 
     #mainLeft {
         border-right: 1px solid #e0e0e0; /* Light gray border */
         background-color: #f0f4f8; /* Soft blue background for the left sidebar */
         padding: 1em;
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
     }
 
     header {
         background-color: #2c3e50 !important; /* Retain original background */
         border-radius: 0; /* Remove rounded corners */
-        -webkit-print-color-adjust: exact;
-        print-color-adjust: exact;
     }
 
     /* Force About Me and Work Experience to stay together on the first page */
@@ -365,7 +359,7 @@ a {
 
     /* Ensure proper spacing between sections */
     #mainRight section {
-        margin-bottom: 2em;     /* Slightly reduced section spacing */
+        margin-bottom: 1.5em;     /* Slightly reduced section spacing */
     }
 
     /* Add margin before Languages section in left column */
