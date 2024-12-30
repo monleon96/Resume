@@ -315,7 +315,7 @@ a {
 
     /* Add margin before Publications section in right column */
     .publications-section h2 {  /* Publications section */
-        margin-top: 3em;
+        padding-top: 1.5em;
     }
 }
 
